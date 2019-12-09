@@ -1,0 +1,59 @@
+{
+  "name": "d2l-associations",
+  "description": "Elements for using the Hypermedia associations api",
+  "repository": "https://github.com/BrightspaceHypermediaComponents/associations.git",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "add-associations.js",
+    "add-associations-launcher.js",
+    "hm-interface.js",
+    "lang",
+    "types"
+  ],
+  "scripts": {
+    "lint": "eslint . --ext .js,.html",
+    "test": "npm run lint && npm run test:local",
+    "test:local": "polymer test --skip-plugin sauce",
+    "test:sauce": "polymer test --skip-plugin local",
+    "test:travis": "polymer test --config-file wct.conf-travis.json",
+    "localize": "gulp localize"
+  },
+  "author": "D2L Corporation",
+  "license": "Apache-2.0",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@polymer/test-fixture": "^4",
+    "axe-core": "^3",
+    "babel-eslint": "^10",
+    "chai": "^4",
+    "change-case": "^3.1.0",
+    "eslint": "^6",
+    "eslint-config-brightspace": "^0.6",
+    "eslint-plugin-html": "^6",
+    "eslint-plugin-lit": "^1",
+    "eslint-plugin-sort-class-members": "^1",
+    "frau-ci": "^1",
+    "gulp": "^4.0.2",
+    "gulp-ejs": "^4.1.2",
+    "gulp-rename": "^1.4.0",
+    "merge-stream": "^2.0.0",
+    "mocha": "^6",
+    "polymer-cli": "^1",
+    "puppeteer": "^1",
+    "require-dir": "^1.2.0",
+    "wct-mocha": "^1"
+  },
+  "dependencies": {
+    "@brightspace-ui/core": "^1",
+    "@webcomponents/webcomponentsjs": "^2",
+    "d2l-alert": "BrightspaceUI/alert#semver:^4",
+    "d2l-hypermedia-constants": "^6.30.0",
+    "d2l-inputs": "BrightspaceUI/inputs#semver:^2",
+    "d2l-loading-spinner": "BrightspaceUI/loading-spinner#semver:^7",
+    "d2l-fetch": "Brightspace/d2l-fetch.git#semver:^2",
+    "lit-element": "^2",
+    "siren-parser": "^8.2.0"
+  }
+}
