@@ -25,10 +25,10 @@ export class HmInterface {
 
 	async setActivityUsageItemAssociations(associationEntity) {
 		const createAssociationAction = associationEntity.getActionByName('create-association');
-		const formData = new FormData();
-		formData.set('itemId', createAssociationAction.getFieldByName('itemId').value);
-		formData.set('type', createAssociationAction.getFieldByName('type').value);
-		return this.makeCall(createAssociationAction.href, { method: 'POST', body: formData }, true);
+		const searchParams = new URLSearchParams();
+		searchParams.append('itemId', parseInt(createAssociationAction.getFieldByName('itemId').value));
+		searchParams.append('type', createAssociationAction.getFieldByName('type').value);
+		return this.makeCall(createAssociationAction.href, { method: 'POST', body: searchParams, contentType: 'application/x-www-form-urlencoded' }, true);
 	}
 
 	async setup() {
@@ -65,25 +65,24 @@ export class HmInterface {
 		return href;
 	}
 
-	async makeCall(href, { method = 'GET', body } = {}, updateEntityStore = false) {
+	async makeCall(href, { method = 'GET', body, contentType } = {}, updateEntityStore = false) {
 		if (this.stopped) {
 			return;
 		}
 		if (!href) {
 			throw new Error('no href provided');
 		}
-		if (typeof body === 'object') {
-			body = JSON.stringify(body);
-		}
 
 		const token = (typeof this.token === 'function') ? await this.token() : this.token;
+		const headers = { Authorization: token };
+		if (contentType) {
+			headers['content-type'] = contentType;
+		}
 
 		const response = await d2lfetch.fetch(new Request(href, {
 			method,
 			body: body,
-			headers: {
-				Authorization: token
-			}
+			headers
 		}));
 		if (!response.ok || !this.isSuccessResponse(response)) {
 			throw new Error(`${href} call was not successful, status: ${response.status}, ok: ${response.ok}`);
