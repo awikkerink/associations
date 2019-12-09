@@ -9,7 +9,7 @@ import { LocalizeMixin } from '@brightspace-ui/core/mixins/localize-mixin.js';
 class AddAssociationsLauncher extends LocalizeMixin(LitElement) {
 	static get properties() {
 		return {
-			activityUsageHref: { type: String, attribute: 'activity-usage-href' },
+			href: { type: String, attribute: 'href' },
 			token: { type: String },
 			potentialAssociations: { type: String },
 			_state: { type: Object },
@@ -81,7 +81,7 @@ class AddAssociationsLauncher extends LocalizeMixin(LitElement) {
 				<d2l-add-associations
 					token="${this.token}"
 					type="${this.type}"
-					activity-usage-href="${this.activityUsageHref}"
+					href="${this.href}"
 				></d2l-add-associations>
 			</d2l-dialog>`;
 	}

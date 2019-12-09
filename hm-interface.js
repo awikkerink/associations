@@ -4,18 +4,18 @@ import SirenParse from 'siren-parser';
 
 export class HmInterface {
 	constructor({
-		activityUsageHref,
+		href,
 		type,
 	}) {
-		this.activityUsageHref = activityUsageHref;
+		this.href = href;
 		this.setupPromise = this.setup();
 		this.stopped = false;
 		this.type = type;
 	}
 
 	checkForRequiredParams() {
-		if (!this.activityUsageHref) {
-			throw new Error('no activityUsageHref provided');
+		if (!this.href) {
+			throw new Error('no href provided');
 		}
 	}
 
@@ -33,7 +33,7 @@ export class HmInterface {
 
 	async setup() {
 		this.checkForRequiredParams();
-		this.activityUsage = await this.makeCall(this.activityUsageHref);
+		this.activityUsage = await this.makeCall(this.href);
 		const queryAssociationsAction = this.activityUsage.getActionByName('query-associations');
 		this.associationsHref = this.getQueryActionHref(queryAssociationsAction, { type: this.type.name });
 		this.associations = await this.makeCall(this.associationsHref);

@@ -14,7 +14,7 @@ class AssociationList extends LocalizeMixin(LitElement) {
 
 	static get properties() {
 		return {
-			activityUsageHref: { type: String, attribute: 'activity-usage-href' },
+			href: { type: String, attribute: 'href' },
 			potentialAssociations: { type: String },
 			_state: { type: Object },
 			token: { type: String },
@@ -76,7 +76,7 @@ class AssociationList extends LocalizeMixin(LitElement) {
 		}
 
 		this.hmInterface = new HmInterface({
-			activityUsageHref: this.activityUsageHref,
+			href: this.href,
 			type: this.associationType,
 		});
 		this.loadStuffThenDoStuff();
