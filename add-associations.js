@@ -71,6 +71,17 @@ class AssociationList extends LocalizeMixin(LitElement) {
 			:host {
 				position: relative;
 			}
+
+			.add-associations-list-text {
+				height: 100%;
+				display: flex;
+			}
+
+			.add-associations-list-text-inner,
+			.add-associations-list-action {
+				margin-top: auto;
+				margin-bottom: auto;
+			}
 		`;
 	}
 
@@ -183,8 +194,12 @@ class AssociationList extends LocalizeMixin(LitElement) {
 	_renderListItem(text, previewHref, href) {
 		return html`
 			<d2l-list-item selectable key="${href}">
-				${text}
-				<div slot="actions">
+				<div class="add-associations-list-text">
+					<div class="add-associations-list-text-inner">
+						${text}
+					</div>
+				</div>
+				<div class="add-associations-list-action" slot="actions">
 					<a href="${previewHref}" target="_blank" label="${this.localize('preview')}">
 						<d2l-icon icon="tier1:preview"></d2l-icon>
 					</a>
