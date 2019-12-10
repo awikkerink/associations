@@ -5,5 +5,8 @@ export const jaJp = {
 	"addSelected": "Add Selected",
 	"cancel": "Cancel",
 	"preview": "Preview",
-	"addRubric": "Add Rubric"
+	"addRubric": "Add Rubric",
+	"errorFetchingList": "Error fetching rubrics list.",
+	"search": "Search",
+	"selectFromList": "Select from the list of existing rubrics"
 };
