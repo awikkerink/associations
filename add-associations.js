@@ -51,13 +51,12 @@ class AssociationList extends LocalizeMixin(LitElement) {
 
 			.add-associations-top {
 				display: flex;
-				padding-bottom: 0.5rem;
+				padding-bottom: 1.5rem;
 			}
 
 			.add-associations-description,
 			d2l-input-search {
 				flex: 1;
-				margin: 0.5rem;
 			}
 
 			.spinner-container {
@@ -81,6 +80,11 @@ class AssociationList extends LocalizeMixin(LitElement) {
 			.add-associations-list-action {
 				margin-top: auto;
 				margin-bottom: auto;
+			}
+
+			.add-associations-spacer {
+				display: inline-block;
+				width: 1rem;
 			}
 		`;
 	}
@@ -247,6 +251,7 @@ class AssociationList extends LocalizeMixin(LitElement) {
 		return html`
 			<div class="add-associations-top">
 				<div class="add-associations-description">${this.localize(getType(this.type).addDescription)}</div>
+				<div class="add-associations-spacer"></div>
 				<d2l-input-search
 					label="${this.localize('search')}"
 					placeholder="${this.localize('search')}"

@@ -64,9 +64,6 @@ class AddAssociationsLauncher extends LocalizeMixin(LitElement) {
 		this._toggleDialog(true);
 	}
 
-	_onCloseEvent() {
-	}
-
 	render() {
 		return html`
 			<d2l-button @click="${this._onClick}" class="add-associations-launcher">
