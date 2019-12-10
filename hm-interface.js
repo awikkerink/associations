@@ -6,11 +6,13 @@ export class HmInterface {
 	constructor({
 		href,
 		type,
+		token,
 	}) {
 		this.href = href;
 		this.setupPromise = this.setup();
 		this.stopped = false;
 		this.type = type;
+		this.token = token;
 	}
 
 	checkForRequiredParams() {
@@ -28,7 +30,10 @@ export class HmInterface {
 		const searchParams = new URLSearchParams();
 		searchParams.append('itemId', parseInt(createAssociationAction.getFieldByName('itemId').value));
 		searchParams.append('type', createAssociationAction.getFieldByName('type').value);
-		return this.makeCall(createAssociationAction.href, { method: 'POST', body: searchParams, contentType: 'application/x-www-form-urlencoded' }, true);
+		const updated = await this.makeCall(createAssociationAction.href, { method: 'POST', body: searchParams, contentType: 'application/x-www-form-urlencoded' });
+
+		window.D2L.Siren.EntityStore.update(this.associationsHref, await this.getToken(), updated);
+		return updated;
 	}
 
 	async setup() {
@@ -65,7 +70,11 @@ export class HmInterface {
 		return href;
 	}
 
-	async makeCall(href, { method = 'GET', body, contentType } = {}, updateEntityStore = false) {
+	async getToken() {
+		return (typeof this.token === 'function') ? await this.token() : this.token;
+	}
+
+	async makeCall(href, { method = 'GET', body, contentType } = {}) {
 		if (this.stopped) {
 			return;
 		}
@@ -73,7 +82,7 @@ export class HmInterface {
 			throw new Error('no href provided');
 		}
 
-		const token = (typeof this.token === 'function') ? await this.token() : this.token;
+		const token = await this.getToken();
 		const headers = { Authorization: token };
 		if (contentType) {
 			headers['content-type'] = contentType;
@@ -89,9 +98,6 @@ export class HmInterface {
 		}
 		const responseJSON = await response.json();
 		const deserializedResponse = SirenParse(responseJSON);
-		if (updateEntityStore && window.D2L && window.D2L.Siren && window.D2L.Siren.EntityStore) {
-			window.D2L.Siren.EntityStore.update(href, token, deserializedResponse);
-		}
 		return deserializedResponse;
 	}
 

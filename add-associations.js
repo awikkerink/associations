@@ -57,7 +57,7 @@ class AssociationList extends LocalizeMixin(LitElement) {
 			.add-associations-description,
 			d2l-input-search {
 				flex: 1;
-				padding: 0.5rem;
+				margin: 0.5rem;
 			}
 
 			.spinner-container {
@@ -103,6 +103,7 @@ class AssociationList extends LocalizeMixin(LitElement) {
 		this.hmInterface = new HmInterface({
 			href: this.href,
 			type: this.associationType,
+			token: this.token
 		});
 
 		const search = this.shadowRoot.querySelector('d2l-input-search');
