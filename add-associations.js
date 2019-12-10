@@ -2,6 +2,7 @@ import '@brightspace-ui/core/components/button/button';
 import '@brightspace-ui/core/components/icons/icon';
 import '@brightspace-ui/core/components/list/list';
 import '@brightspace-ui/core/components/list/list-item';
+import '@brightspace-ui/core/components/inputs/input-search';
 import 'd2l-alert/d2l-alert';
 import 'd2l-loading-spinner/d2l-loading-spinner';
 import { css, html, LitElement } from 'lit-element/lit-element.js';
@@ -19,6 +20,7 @@ class AssociationList extends LocalizeMixin(LitElement) {
 			_state: { type: Object },
 			token: { type: String },
 			type: { type: String },
+			_textFilter: { type: String }
 		};
 	}
 
@@ -79,6 +81,12 @@ class AssociationList extends LocalizeMixin(LitElement) {
 			href: this.href,
 			type: this.associationType,
 		});
+
+		const search = this.shadowRoot.querySelector('d2l-input-search');
+		if (search) {
+			search.value = '';
+		}
+		this._textFilter = '';
 		this.loadStuffThenDoStuff();
 	}
 
@@ -159,7 +167,12 @@ class AssociationList extends LocalizeMixin(LitElement) {
 	}
 
 	_renderListItems() {
-		return this.potentialAssociations && this.potentialAssociations.map(({ item }) => html`${
+		const list = this.potentialAssociations || [];
+		const filteredList = this._textFilter ?
+			list.filter(({ item }) => item.properties.name.toLowerCase().includes(this._textFilter)) :
+			list;
+
+		return filteredList.map(({ item }) => html`${
 			this._renderListItem(item.properties.name, item.getLinkByClass('preview').href, item.getLinkByRel('self').href)
 		}`);
 	}
@@ -176,9 +189,19 @@ class AssociationList extends LocalizeMixin(LitElement) {
 		return html`<d2l-alert type="error">${this.localize('errorFetchingList')}</d2l-alert>`;
 	}
 
+	_searchMade(e) {
+		this._textFilter = (e.detail.value || '').toLowerCase();
+	}
+
 	renderSelecting() {
 		return html`
 			<p>${this.localize(this.associationType.addDescription)}</p>
+			<d2l-input-search
+				label="${this.localize('search')}"
+				placeholder="${this.localize('search')}"
+				@d2l-input-search-searched="${this._searchMade}"
+			>
+			</d2l-input-search>
 			<d2l-list>
 				${this._renderListItems()}
 			</d2l-list>
