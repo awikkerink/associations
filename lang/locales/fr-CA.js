@@ -8,5 +8,6 @@ export const frCa = {
 	"addRubric": "Add Rubric",
 	"errorFetchingList": "Error fetching rubrics list.",
 	"search": "Search",
-	"selectFromList": "Select from the list of existing rubrics"
+	"selectFromList": "Select from the list of existing rubrics",
+	"errorAddingAssociations": "Error adding associations."
 };

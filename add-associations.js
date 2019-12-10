@@ -59,6 +59,18 @@ class AssociationList extends LocalizeMixin(LitElement) {
 				flex: 1;
 				padding: 0.5rem;
 			}
+
+			.spinner-container {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			:host {
+				position: relative;
+			}
 		`;
 	}
 
@@ -124,6 +136,9 @@ class AssociationList extends LocalizeMixin(LitElement) {
 			},
 			error: {
 				render: this.renderError.bind(this),
+			},
+			errorAdding: {
+				render: this.renderErrorAdding.bind(this),
 			}
 		};
 	}
@@ -143,7 +158,7 @@ class AssociationList extends LocalizeMixin(LitElement) {
 			.filter(x => selectedAssociations.indexOf(x.item.getLinkByRel('self').href) > -1)
 			.map(x => x.association);
 		const associationPromises = associations.map(x => this.hmInterface.setActivityUsageItemAssociations(x));
-		await Promise.all(associationPromises);
+		await Promise.all(associationPromises).catch(() => this.setState(this.states.errorAdding));
 		this._sendAssociationsAddedEvent();
 		this._clearAndClose();
 	}
@@ -188,16 +203,24 @@ class AssociationList extends LocalizeMixin(LitElement) {
 		}`);
 	}
 
+	renderSpinner() {
+		return html`<div class="spinner-container"><d2l-loading-spinner size="100"></d2l-loading-spinner></div>`;
+	}
+
 	renderSubmitting() {
-		return html`<d2l-loading-spinner></d2l-loading-spinner>`;
+		return this.renderSpinner();
 	}
 
 	renderLoading() {
-		return html`<d2l-loading-spinner></d2l-loading-spinner>`;
+		return this.renderSpinner();
 	}
 
 	renderError() {
 		return html`<d2l-alert type="error">${this.localize('errorFetchingList')}</d2l-alert>`;
+	}
+
+	renderErrorAdding() {
+		return html`<d2l-alert type="error">${this.localize('errorAddingAssociations')}</d2l-alert>`;
 	}
 
 	_searchMade(e) {
