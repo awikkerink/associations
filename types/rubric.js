@@ -1,23 +1,14 @@
 import { Rels } from 'd2l-hypermedia-constants';
 
 export class RubricType {
+	static get name() {
+		return 'rubrics';
+	}
+
 	constructor(localize) {
 		this.localize = localize;
-	}
-
-	get title() {
-		return 'addRubric';
-	}
-
-	get itemRel() {
-		return Rels.Rubrics.rubric;
-	}
-
-	get addDesciption() {
-		return 'selectFromList';
-	}
-
-	get name() {
-		return 'rubrics';
+		this.title = 'addRubric';
+		this.itemRel = Rels.Rubrics.rubric;
+		this.addDescription = 'selectFromList';
 	}
 }
