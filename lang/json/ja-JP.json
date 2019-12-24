@@ -1,2 +1,10 @@
 {
+   "addRubric" : "注釈の追加",
+   "addSelected" : "選択項目を追加",
+   "cancel" : "キャンセル",
+   "errorAddingAssociations" : "関連付けの追加のエラー",
+   "errorFetchingList" : "注釈リストのフェッチのエラー",
+   "preview" : "プレビュー",
+   "search" : "検索",
+   "selectFromList" : "既存の注釈のリストから選択"
 }

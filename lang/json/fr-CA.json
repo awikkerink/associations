@@ -1,2 +1,10 @@
 {
+   "addRubric" : "Ajouter une rubrique",
+   "addSelected" : "Inclure la sélection",
+   "cancel" : "Annuler",
+   "errorAddingAssociations" : "Erreur lors de l’ajout des associations.",
+   "errorFetchingList" : "Erreur de recherche de la liste de rubriques.",
+   "preview" : "Prévisualiser",
+   "search" : "Rechercher",
+   "selectFromList" : "Sélectionnez dans la liste des rubriques existantes"
 }

@@ -1,2 +1,10 @@
 {
+   "addRubric" : "إضافة آلية تقييم",
+   "addSelected" : "إضافة المحدّد",
+   "cancel" : "إلغاء",
+   "errorAddingAssociations" : "خطأ في إضافة الاقترانات.",
+   "errorFetchingList" : "خطأ في إحضار قائمة آليات التقييم.",
+   "preview" : "معاينة",
+   "search" : "بحث",
+   "selectFromList" : "تحديد من قائمة آليات التقييم الحالية"
 }

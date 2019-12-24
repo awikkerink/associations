@@ -1,2 +1,10 @@
 {
+   "addRubric" : "Rubric toevoegen",
+   "addSelected" : "Selectie toevoegen",
+   "cancel" : "Annuleren",
+   "errorAddingAssociations" : "Fout bij het toevoegen van koppelingen.",
+   "errorFetchingList" : "Fout bij het ophalen van rubrics-lijst.",
+   "preview" : "Voorbeeldweergave",
+   "search" : "Zoeken",
+   "selectFromList" : "Maak een keuze uit de lijst met bestaande rubrics"
 }
