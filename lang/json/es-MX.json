@@ -1,2 +1,10 @@
 {
+   "addRubric" : "Agregar rúbrica",
+   "addSelected" : "Agregar selección",
+   "cancel" : "Cancelar",
+   "errorAddingAssociations" : "Error al agregar asociaciones.",
+   "errorFetchingList" : "Error al recuperar la lista de rúbricas.",
+   "preview" : "Vista previa",
+   "search" : "Buscar",
+   "selectFromList" : "Seleccione de la lista de rúbricas existentes"
 }

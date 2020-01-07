@@ -1,2 +1,10 @@
 {
+   "addRubric" : "Rubrik Ekle",
+   "addSelected" : "Seçilenleri Ekle",
+   "cancel" : "İptal",
+   "errorAddingAssociations" : "İlişkiler eklenemedi.",
+   "errorFetchingList" : "Rubrik listesi alınamadı.",
+   "preview" : "Önizle",
+   "search" : "Ara",
+   "selectFromList" : "Mevcut rubrik listesinden seç"
 }

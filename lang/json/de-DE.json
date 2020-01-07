@@ -1,2 +1,10 @@
 {
+   "addRubric" : "Bewertungsschema hinzufügen",
+   "addSelected" : "Ausgewählte hinzufügen",
+   "cancel" : "Abbrechen",
+   "errorAddingAssociations" : "Fehler beim Hinzufügen von Administratoren.",
+   "errorFetchingList" : "Fehler beim Abrufen der Liste der Bewertungsschemas.",
+   "preview" : "Vorschau",
+   "search" : "Suchen",
+   "selectFromList" : "Aus der Liste vorhandener Bewertungsschemas auswählen"
 }

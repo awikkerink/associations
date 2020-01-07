@@ -1,2 +1,10 @@
 {
+   "addRubric" : "Lägg till rubricering",
+   "addSelected" : "Lägg till vald",
+   "cancel" : "Avbryt",
+   "errorAddingAssociations" : "Fel vid tillägg av associationer.",
+   "errorFetchingList" : "Ett fel uppstod när rubriceringslistan skulle hämtas.",
+   "preview" : "Förhandsgranska",
+   "search" : "Sökning",
+   "selectFromList" : "Välj från listan över befintliga rubriceringar"
 }

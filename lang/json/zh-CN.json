@@ -1,2 +1,10 @@
 {
+   "addRubric" : "添加量规",
+   "addSelected" : "添加所选项",
+   "cancel" : "取消",
+   "errorAddingAssociations" : "添加关联时出错。",
+   "errorFetchingList" : "提取量规列表时出错。",
+   "preview" : "预览",
+   "search" : "搜索",
+   "selectFromList" : "从现有量规列表中选择"
 }
