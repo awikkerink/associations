@@ -2,12 +2,12 @@
 /* eslint quotes: ["error", "double"] */
 
 export const frCa = {
-	"addSelected": "Add Selected",
-	"cancel": "Cancel",
-	"preview": "Preview",
-	"addRubric": "Add Rubric",
-	"errorFetchingList": "Error fetching rubrics list.",
-	"search": "Search",
-	"selectFromList": "Select from the list of existing rubrics",
-	"errorAddingAssociations": "Error adding associations."
+	"addSelected": "Inclure la sélection",
+	"cancel": "Annuler",
+	"preview": "Prévisualiser",
+	"addRubric": "Ajouter une rubrique",
+	"errorFetchingList": "Erreur de recherche de la liste de rubriques.",
+	"search": "Rechercher",
+	"selectFromList": "Sélectionnez dans la liste des rubriques existantes",
+	"errorAddingAssociations": "Erreur lors de l’ajout des associations."
 };

@@ -2,12 +2,12 @@
 /* eslint quotes: ["error", "double"] */
 
 export const trTr = {
-	"addSelected": "Add Selected",
-	"cancel": "Cancel",
-	"preview": "Preview",
-	"addRubric": "Add Rubric",
-	"errorFetchingList": "Error fetching rubrics list.",
-	"search": "Search",
-	"selectFromList": "Select from the list of existing rubrics",
-	"errorAddingAssociations": "Error adding associations."
+	"addSelected": "Seçilenleri Ekle",
+	"cancel": "İptal",
+	"preview": "Önizle",
+	"addRubric": "Rubrik Ekle",
+	"errorFetchingList": "Rubrik listesi alınamadı.",
+	"search": "Ara",
+	"selectFromList": "Mevcut rubrik listesinden seç",
+	"errorAddingAssociations": "İlişkiler eklenemedi."
 };

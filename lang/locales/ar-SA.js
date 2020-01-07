@@ -2,12 +2,12 @@
 /* eslint quotes: ["error", "double"] */
 
 export const arSa = {
-	"addSelected": "Add Selected",
-	"cancel": "Cancel",
-	"preview": "Preview",
-	"addRubric": "Add Rubric",
-	"errorFetchingList": "Error fetching rubrics list.",
-	"search": "Search",
-	"selectFromList": "Select from the list of existing rubrics",
-	"errorAddingAssociations": "Error adding associations."
+	"addSelected": "إضافة المحدّد",
+	"cancel": "إلغاء",
+	"preview": "معاينة",
+	"addRubric": "إضافة آلية تقييم",
+	"errorFetchingList": "خطأ في إحضار قائمة آليات التقييم.",
+	"search": "بحث",
+	"selectFromList": "تحديد من قائمة آليات التقييم الحالية",
+	"errorAddingAssociations": "خطأ في إضافة الاقترانات."
 };

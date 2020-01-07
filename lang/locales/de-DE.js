@@ -2,12 +2,12 @@
 /* eslint quotes: ["error", "double"] */
 
 export const deDe = {
-	"addSelected": "Add Selected",
-	"cancel": "Cancel",
-	"preview": "Preview",
-	"addRubric": "Add Rubric",
-	"errorFetchingList": "Error fetching rubrics list.",
-	"search": "Search",
-	"selectFromList": "Select from the list of existing rubrics",
-	"errorAddingAssociations": "Error adding associations."
+	"addSelected": "Ausgewählte hinzufügen",
+	"cancel": "Abbrechen",
+	"preview": "Vorschau",
+	"addRubric": "Bewertungsschema hinzufügen",
+	"errorFetchingList": "Fehler beim Abrufen der Liste der Bewertungsschemas.",
+	"search": "Suchen",
+	"selectFromList": "Aus der Liste vorhandener Bewertungsschemas auswählen",
+	"errorAddingAssociations": "Fehler beim Hinzufügen von Administratoren."
 };

@@ -2,12 +2,12 @@
 /* eslint quotes: ["error", "double"] */
 
 export const jaJp = {
-	"addSelected": "Add Selected",
-	"cancel": "Cancel",
-	"preview": "Preview",
-	"addRubric": "Add Rubric",
-	"errorFetchingList": "Error fetching rubrics list.",
-	"search": "Search",
-	"selectFromList": "Select from the list of existing rubrics",
-	"errorAddingAssociations": "Error adding associations."
+	"addSelected": "選択項目を追加",
+	"cancel": "キャンセル",
+	"preview": "プレビュー",
+	"addRubric": "注釈の追加",
+	"errorFetchingList": "注釈リストのフェッチのエラー",
+	"search": "検索",
+	"selectFromList": "既存の注釈のリストから選択",
+	"errorAddingAssociations": "関連付けの追加のエラー"
 };

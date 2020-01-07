@@ -2,12 +2,12 @@
 /* eslint quotes: ["error", "double"] */
 
 export const nlNl = {
-	"addSelected": "Add Selected",
-	"cancel": "Cancel",
-	"preview": "Preview",
-	"addRubric": "Add Rubric",
-	"errorFetchingList": "Error fetching rubrics list.",
-	"search": "Search",
-	"selectFromList": "Select from the list of existing rubrics",
-	"errorAddingAssociations": "Error adding associations."
+	"addSelected": "Selectie toevoegen",
+	"cancel": "Annuleren",
+	"preview": "Voorbeeldweergave",
+	"addRubric": "Rubric toevoegen",
+	"errorFetchingList": "Fout bij het ophalen van rubrics-lijst.",
+	"search": "Zoeken",
+	"selectFromList": "Maak een keuze uit de lijst met bestaande rubrics",
+	"errorAddingAssociations": "Fout bij het toevoegen van koppelingen."
 };

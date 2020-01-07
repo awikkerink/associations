@@ -2,12 +2,12 @@
 /* eslint quotes: ["error", "double"] */
 
 export const svSe = {
-	"addSelected": "Add Selected",
-	"cancel": "Cancel",
-	"preview": "Preview",
-	"addRubric": "Add Rubric",
-	"errorFetchingList": "Error fetching rubrics list.",
-	"search": "Search",
-	"selectFromList": "Select from the list of existing rubrics",
-	"errorAddingAssociations": "Error adding associations."
+	"addSelected": "Lägg till vald",
+	"cancel": "Avbryt",
+	"preview": "Förhandsgranska",
+	"addRubric": "Lägg till rubricering",
+	"errorFetchingList": "Ett fel uppstod när rubriceringslistan skulle hämtas.",
+	"search": "Sökning",
+	"selectFromList": "Välj från listan över befintliga rubriceringar",
+	"errorAddingAssociations": "Fel vid tillägg av associationer."
 };

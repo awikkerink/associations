@@ -2,12 +2,12 @@
 /* eslint quotes: ["error", "double"] */
 
 export const esMx = {
-	"addSelected": "Add Selected",
-	"cancel": "Cancel",
-	"preview": "Preview",
-	"addRubric": "Add Rubric",
-	"errorFetchingList": "Error fetching rubrics list.",
-	"search": "Search",
-	"selectFromList": "Select from the list of existing rubrics",
-	"errorAddingAssociations": "Error adding associations."
+	"addSelected": "Agregar selección",
+	"cancel": "Cancelar",
+	"preview": "Vista previa",
+	"addRubric": "Agregar rúbrica",
+	"errorFetchingList": "Error al recuperar la lista de rúbricas.",
+	"search": "Buscar",
+	"selectFromList": "Seleccione de la lista de rúbricas existentes",
+	"errorAddingAssociations": "Error al agregar asociaciones."
 };

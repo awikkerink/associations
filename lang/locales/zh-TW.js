@@ -2,12 +2,12 @@
 /* eslint quotes: ["error", "double"] */
 
 export const zhTw = {
-	"addSelected": "Add Selected",
-	"cancel": "Cancel",
-	"preview": "Preview",
-	"addRubric": "Add Rubric",
-	"errorFetchingList": "Error fetching rubrics list.",
-	"search": "Search",
-	"selectFromList": "Select from the list of existing rubrics",
-	"errorAddingAssociations": "Error adding associations."
+	"addSelected": "新增選取項目",
+	"cancel": "取消",
+	"preview": "預覽",
+	"addRubric": "新增量規",
+	"errorFetchingList": "擷取量規清單時發生錯誤。",
+	"search": "搜尋",
+	"selectFromList": "從現有量規清單中選取",
+	"errorAddingAssociations": "新增相關項目時發生錯誤。"
 };
